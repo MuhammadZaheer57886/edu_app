@@ -15,7 +15,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
   int _selectedIndex = 0;
   final screens=[
     const HomePage(),
-    const ChatGpt(),
+   const ChatGPTApp(),
     const FeedBack(),
     const Profile(),
   ];
