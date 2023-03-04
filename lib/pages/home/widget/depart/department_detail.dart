@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:my_fyp/data_provider/departments_class.dart';
 
 class DepartmentDetail extends StatelessWidget {
+  
   final Department department;
 
   const DepartmentDetail({
@@ -18,15 +20,21 @@ class DepartmentDetail extends StatelessWidget {
             expandedHeight: 200,
             pinned: true,
             flexibleSpace: FlexibleSpaceBar(
-              title: Text(department.name,
-                  style: const TextStyle(
-                    color: Colors.black,
-                    fontSize: 16.0,
-                  )),
-              background: Image.asset(
-                department.img,
-                fit: BoxFit.cover,
+              background: Container(
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("assets/img/cs_list/cs_sem3.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
+              title: Text(department.name,
+                  style: GoogleFonts.montserrat(
+                    color: const Color.fromARGB(255, 255, 253, 253),
+                    fontSize: 20,
+                    fontWeight: FontWeight.w600,
+                  )
+                  ),
             ),
           ),
           SliverList(
@@ -39,17 +47,16 @@ class DepartmentDetail extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Text("Semester ${index + 1}",
-                              style: const TextStyle(fontSize: 20)),
+                          
                           const SizedBox(height: 8),
                           Container(
-                            height: 100,
-                            width: 200,
+                            height: 200,
+                            width: 500,
                             decoration: const BoxDecoration(
                               image: DecorationImage(
                                 image:
-                                    AssetImage("assets/img/cs_list/cs_sem.png"),
-                                fit: BoxFit.cover,
+                                    AssetImage("assets/img/cs_list/cs_sem3.jpg"),
+                                fit: BoxFit.fitWidth,
                               ),
                             ),
                             child: Container(
@@ -57,22 +64,16 @@ class DepartmentDetail extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   "Semester ${index + 1}",
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    shadows: [
-                                      Shadow(
-                                        offset: Offset(2.0, 2.0),
-                                        blurRadius: 3.0,
-                                        color: Colors.black26,
-                                      ),
-                                    ],
+                                  style: GoogleFonts.montserrat(
+                                    color: const Color.fromARGB(255, 252, 249, 249),
+                                    fontSize: 50,
+                                    fontWeight: FontWeight.w600,
+                                  ),                                                     
+                                    
                                   ),
                                 ),
                               ),
                             ),
-                          ),
                         ],
                       ),
                     ),

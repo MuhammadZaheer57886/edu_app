@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:my_fyp/pages/feedback.dart';
-import 'package:my_fyp/pages/home/home_page.dart';
 import 'package:my_fyp/pages/profile.dart';
+import 'package:my_fyp/pages/home/home_page.dart';
+import 'package:my_fyp/pages/feedback.dart';
 import 'package:my_fyp/pages/chat_gpt.dart';
 //this is bottom navigation bar
 class BottomNavBar extends StatefulWidget {
@@ -16,8 +16,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
   final screens=[
     const HomePage(),
    const ChatGPTApp(),
-    const FeedBack(),
     const Profile(),
+    const FeedBack(),
   ];
   
 
