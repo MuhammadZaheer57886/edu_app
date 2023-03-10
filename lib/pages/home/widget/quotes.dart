@@ -40,7 +40,7 @@ class _QuotesState extends State<Quotes> {
   @override
   void initState() {
     super.initState();
-    timer = Timer.periodic(const Duration(seconds: 3), (timer) {
+    timer = Timer.periodic(const Duration(seconds: 5), (timer) {
       if (_selectedPromo < 4) {
         _selectedPromo++;
       } else {

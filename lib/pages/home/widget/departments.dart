@@ -12,10 +12,11 @@ class Departments extends StatefulWidget {
 }
 
 class _DepartmentsState extends State<Departments> {
+ 
   final List<Department> departmentList  = [
-      Department('assets/img/laptop.jpg' , 'Computer Science',),
-      Department('assets/img/islamic_studies.jpg','Islamiyart',),
-      Department('assets/img/physics_dept.png','Physics'),
+      Department('assets/img/laptop.jpg' , 'Computer Science',1),
+      Department('assets/img/islamic_studies.jpg','Islamiyart',2),
+      Department('assets/img/physics_dept.png','Physics',3),
       
     ];
 
